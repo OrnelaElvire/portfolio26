@@ -1,31 +1,101 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>BTS SIO – Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>BTS SIO – Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- MENU -->
-  <nav>
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="presentation.html">Présentation</a></li>
-      <li><a href="bts.html">BTS SIO</a></li>
-      <li><a href="projets.html">Projets</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+    <!-- MENU -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="presentation.html">Présentation</a></li>
+            <li><a href="bts.html">BTS SIO</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-  <!-- CONTENU -->
-  <section>
-    <h1>BTS SIO</h1>
-    <p>
-      Le BTS Services Informatiques aux Organisations forme
-      aux métiers de l’informatique.
-    </p>
-  </section>
+    <section class="contenu">
+
+        <h1>BTS SIO</h1>
+
+        <p>
+            Le BTS Services Informatiques aux Organisations (SIO) est une formation
+            de niveau Bac+2 destinée aux étudiants souhaitant se spécialiser dans
+            les métiers de l'informatique. Cette formation permet d'acquérir des
+            compétences techniques et professionnelles répondant aux besoins des entreprises.
+        </p>
+
+        <p>
+            Le BTS SIO propose deux spécialités : SLAM et SISR.
+        </p>
+
+        <div class="boutons">
+            <button onclick="afficherSLAM()">Option SLAM</button>
+            <button onclick="afficherSISR()">Option SISR</button>
+        </div>
+
+        <div id="specialite">
+
+            <h2>Option SLAM</h2>
+
+            <p>
+                La spécialité SLAM (Solutions Logicielles et Applications Métiers)
+                est orientée vers le développement d'applications, de sites web et
+                la gestion de bases de données.
+            </p>
+
+            <ul>
+                <li>Développement Web</li>
+                <li>Développement d'applications</li>
+                <li>Gestion de bases de données</li>
+                <li>Programmation orientée objet</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+    <script>
+        function afficherSLAM() {
+            document.getElementById("specialite").innerHTML = `
+                <h2>Option SLAM</h2>
+
+                <p>
+                    La spécialité SLAM (Solutions Logicielles et Applications Métiers)
+                    forme aux métiers du développement informatique.
+                </p>
+
+                <ul>
+                    <li>Développement Web</li>
+                    <li>Développement d'applications</li>
+                    <li>Bases de données</li>
+                    <li>Programmation</li>
+                </ul>
+            `;
+        }
+
+        function afficherSISR() {
+            document.getElementById("specialite").innerHTML = `
+                <h2>Option SISR</h2>
+
+                <p>
+                    La spécialité SISR (Solutions d'Infrastructure, Systèmes et Réseaux)
+                    forme aux métiers de l'administration systèmes et réseaux.
+                </p>
+
+                <ul>
+                    <li>Administration réseau</li>
+                    <li>Cybersécurité</li>
+                    <li>Maintenance informatique</li>
+                    <li>Gestion des serveurs</li>
+                </ul>
+            `;
+        }
+    </script>
 
 </body>
 </html>
